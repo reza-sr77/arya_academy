@@ -1,0 +1,139 @@
+
+/* search input */
+.questionSearch {
+    background-color: rgba(0, 0, 0, 0.432);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    height: 50px;
+    width: 300px;
+}
+
+.questionSearchBtn {
+    width: 45px;
+    top: 4px;
+    left: 12px;
+    right: 12px;
+}
+
+
+/* search box */
+
+
+.questionSearch-box {
+    background: #fdfdfd;
+    overflow: hidden;
+    height: 50px;
+    border-radius: 60px;
+}
+
+.dark .questionSearch-box {
+    background: #0b1121;
+}
+
+.questionSearch-input {
+    background: transparent;
+    color: #444;
+    outline: none;
+    border: none;
+    line-height: 40px;
+    width: 0px;
+    height: 100%;
+    float: left;
+    font-size: 14px;
+    transition: 0.7s ease;
+}
+
+.dark .questionSearch-input {
+    color: #fff;
+}
+
+
+.questionSearch-input::placeholder {
+    color: #444;
+}
+
+.dark .questionSearch-input::placeholder {
+    color: #fff;
+}
+
+.questionSearch-input {
+    width: 200px;
+}
+
+.questionSearch-input:focus {
+    width: 240px;
+    margin: 0px 8px;
+}
+
+
+/* icon */
+
+.questionBoxBg i {
+    font-size: 18px;
+}
+/* input */
+
+/* input style */
+.questionInput {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+    border-radius: 5px;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 2px outset rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: 0.3s;
+}
+
+.questionInput:focus {
+    box-shadow: 0px 1px 24px -1px rgba(13, 33, 211, 0.555);
+}
+
+.questionInput::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    /* color: #1f2937; */
+    color: #fff;
+    opacity: 1;
+    /* Firefox */
+}
+
+.questionInput:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    /* color: #1f2937; */
+    color: #fff;
+}
+
+.questionInput::-ms-input-placeholder {
+    /* Microsoft Edge */
+    /* color: #1f2937; */
+    color: #fff;
+}
+
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+/* .dark .questionInput::placeholder {
+    color: #fff;
+    opacity: 1;
+} */
+/* Firefox */
+
+/* Internet Explorer 10-11 */
+/* .dark .questionInput:-ms-input-placeholder {
+    color: #fff;
+} */
+
+/* Microsoft Edge */
+/* .dark .questionInput::-ms-input-placeholder {
+    color: #fff;
+} */
+
+
+
+.questionInput option {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    color: #333;
+}

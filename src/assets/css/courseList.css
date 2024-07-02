@@ -1,0 +1,290 @@
+.marginText {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.underHeaderBg {
+    background: url('./../img/landing/background/underBg.png') no-repeat;
+    background-size: 90% 100%;
+}
+
+/* search input */
+.courseListSearch {
+    background-color: rgba(0, 0, 0, 0.432);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    height: 50px;
+    width: 300px;
+}
+
+.courseListSearchBtn {
+    width: 45px;
+    top: 4px;
+    left: 12px;
+    right: 12px;
+}
+
+/* CourseListBox css */
+.dark .glassBg {
+    background: rgb(181 181 181 / 23%);
+}
+
+.dark .glassBg:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+
+.gift {
+    z-index: 20;
+    border-radius: 0 50px 50px 0;
+    top: 0;
+    left: 0;
+}
+
+
+/* banner */
+.banner {
+    transition: 0.3s;
+}
+
+.banner:hover {
+    transform: scale(1.02);
+}
+
+/* courseList Effect */
+.clCircle1 {
+    top: 50px;
+    right: -60px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(247, 247, 37);
+}
+
+.clCircle2 {
+    top: 250px;
+    left: -30px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(37, 58, 247);
+}
+
+.clCircle3 {
+    top: 480px;
+    right: -90px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(247, 37, 37);
+}
+
+.clCircle4 {
+    top: 700px;
+    left: -20px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(45, 192, 0);
+}
+
+.clCircle5 {
+    top: 950px;
+    right: -40px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(0, 209, 216);
+}
+
+.clCircle6 {
+    top: 1200px;
+    left: -30px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(129, 0, 180);
+}
+
+.clCircle7 {
+    top: 1500px;
+    right: -30px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(241, 173, 24);
+}
+
+.clCircle8 {
+    top: 1700px;
+    left: -80px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(0, 180, 105);
+}
+
+.clCircle9 {
+    top: 1900px;
+    right: -30px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(87, 252, 46);
+}
+
+.clCircle10 {
+    top: 2100px;
+    left: -50px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(228, 54, 97);
+}
+
+.clCircle11 {
+    top: 2300px;
+    right: -70px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(0, 2, 102);
+}
+
+.clCircle12 {
+    top: 2500px;
+    left: -90px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(244, 255, 97);
+}
+
+.clCircle13 {
+    top: 2700px;
+    right: -50px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(144, 255, 71);
+}
+
+.clCircle14 {
+    top: 2900px;
+    left: -50px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgb(255, 71, 71);
+}
+
+/* filter */
+
+@media screen and (max-width:767px) {
+    .filter {
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 300px;
+        height: 100%;
+        z-index: 60;
+        margin-right: -500px;
+        margin-left: -500px;
+        transition: 0.3s;
+        /* background: rgba(0, 0, 0, 0.4); */
+        /* -webkit-backdrop-filter: blur(5px); */
+        /* backdrop-filter: blur(5px); */
+        overflow-y: scroll;
+        padding: 5px 0;
+        direction: ltr;
+    }
+
+    .filterItem {
+        margin: 15px auto;
+        direction: rtl;
+    }
+
+    .filterBack {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.288);
+        z-index: 50;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        top: 0;
+        right: 0;
+    }
+
+    .showFilter {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .showFilterBack {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+
+/* search box */
+
+
+.courseListSearch-box {
+    background: #fdfdfd;
+    overflow: hidden;
+    height: 50px;
+    border-radius: 60px;
+}
+
+.dark .courseListSearch-box {
+    background: #0b1121;
+}
+
+.courseListSearch-input {
+    background: transparent;
+    color: #444;
+    outline: none;
+    border: none;
+    line-height: 40px;
+    width: 0px;
+    height: 100%;
+    float: left;
+    font-size: 14px;
+    transition: 0.7s ease;
+}
+
+.dark .courseListSearch-input {
+    color: #fff;
+}
+
+
+.courseListSearch-input::placeholder {
+    color: #444;
+}
+
+.dark .courseListSearch-input::placeholder {
+    color: #fff;
+}
+
+.courseListSearch-input {
+    width: 200px;
+}
+
+.courseListSearch-input:focus {
+    width: 240px;
+    margin: 0px 8px;
+}
+
+
+/* icon */
+
+.CourseListBoxBg i {
+    font-size: 18px;
+}

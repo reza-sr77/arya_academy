@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./../../dist/css/output.css" rel="stylesheet" />
+    <link href="./../assets/css/question.css" rel="stylesheet" />
+    <link href="./../assets/css/bgContainer.css" rel="stylesheet" />
+    <link href="./../assets/css/glass.css" rel="stylesheet" />
+    <link href="./../assets/css/comment.css" rel="stylesheet" />
+    <link href="./../assets/css/header.css" rel="stylesheet" />
+    <link href="./../assets/css/footer.css" rel="stylesheet" />
+    <link href="./../assets/css/animate.css" rel="stylesheet" />
+    <link href="./../assets/css/font.css" rel="stylesheet" />
+    <link href="./../assets/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <title>سوال جدید</title>
+</head>
+
+<script src="./../assets/js/menuMobile.js"></script>
+<script src="./../assets/js/filter.js"></script>
+<script src="./../assets/js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+<script src='https://www.google.com/recaptcha/api.js?hl=fa'></script>
+
+
+<body class="dark">
+
+    <div class="overflow-hidden">
+
+        <!-- menu mobile start -->
+        <div id="menuMobileBack" class="menuMobileBack cursor-pointer" onclick="toggleMenuMobile()">
+        </div>
+        <div id="menuMobileBox" class="z-10 menuMobileBox">
+            <div class="flex flex-row items-center py-4 justify-between">
+
+                <!-- menu mobile logo -->
+                <img class="w-12 h-12 mx-2" src="./../assets/img/landing/Course.png" alt="">
+                <!-- menu mobile logo -->
+
+                <!-- menu mobile title -->
+                <span class="text-white"> آموزشگاه</span>
+                <!-- menu mobile title -->
+
+                <!-- menu mobile close icon -->
+                <img onclick="toggleMenuMobile()" class="w-12 h-12 mx-2 cursor-pointer"
+                    src="./../assets/img/landing/close.png" alt="">
+                <!-- menu mobile close icon -->
+
+            </div>
+            <!-- menu mobile box -->
+            <ul
+                class="flex flex-col w-full h-full gap-2 justify-start items-center list-none dark:text-white text-gray-200">
+
+                <!-- menu item with sub menu-->
+                <li
+                    class="accordion flex flex-col menuItem p-2 hover:bg-black/30 hover:text-white transition cursor-pointer px-4 w-full">
+                    <div class="w-full flex items-center ">
+                        <img class="w-8 h-8" src="./../assets/img/landing/menuMobile/home.png" alt="">
+                        <a class="mx-2">صفحه اصلی</a>
+                    </div>
+                </li>
+                <!-- menu item with sub menu-->
+
+                <!-- sub Menu -->
+                <div class="panel flex flex-col w-11/12 bg-gray-500 rounded-lg text-white">
+                    <a class="w-full text-center p-4 hover:bg-gray-900" href="">صفحه اصلی 1</a>
+                    <a class="w-full text-center p-4 hover:bg-gray-900" href="">صفحه اصلی 2</a>
+                </div>
+                <!-- sub Menu -->
+
+                <!-- menu item with out sub menu-->
+                <li
+                    class="flex menuItem items-center p-2 hover:bg-black/30 hover:text-white transition cursor-pointer px-4 w-full">
+                    <img class="w-8 h-8" src="./../assets/img/landing/menuMobile/online-education.png" alt="">
+                    <a class="mx-2" href="">دوره ها</a>
+                </li>
+                <!-- menu item with out sub menu-->
+
+                <li
+                    class="flex menuItem items-center p-2 hover:bg-black/30 hover:text-white transition cursor-pointer px-4 w-full">
+                    <img class="w-8 h-8" src="./../assets/img/landing/menuMobile/article.png" alt="">
+                    <a class="mx-2" href="">مقالات</a>
+                </li>
+                <li
+                    class="flex menuItem items-center p-2 hover:bg-black/30 hover:text-white transition cursor-pointer px-4 w-full">
+                    <img class="w-8 h-8" src="./../assets/img/landing/menuMobile/podcast.png" alt="">
+                    <a class="mx-2" href="">پادکست</a>
+                </li>
+                <li
+                    class="flex menuItem items-center p-2 hover:bg-black/30 hover:text-white transition cursor-pointer px-4 w-full">
+                    <img class="w-8 h-8" src="./../assets/img/landing/menuMobile/cooperate.png" alt="">
+                    <a class="mx-2" href="">همکاری</a>
+                </li>
+                <li
+                    class="flex menuItem items-center p-2 hover:bg-black/30 hover:text-white transition cursor-pointer px-4 w-full">
+                    <img class="w-8 h-8" src="./../assets/img/landing/menuMobile/high-five.png" alt="">
+                    <a class="mx-2" href="">تماس با ما</a>
+                </li>
+                <li
+                    class="flex menuItem items-center p-2 hover:bg-black/30 hover:text-white transition cursor-pointer px-4 w-full">
+                    <img class="w-8 h-8" src="./../assets/img/landing/menuMobile/contact.png" alt="">
+                    <a class="mx-2" href="">درباره ما</a>
+                </li>
+            </ul>
+            <!-- menu mobile box -->
+
+        </div>
+        <!-- menu mobile end -->
+
+        <div class="w-full h-16 marginText">
+
+            <!-- Header Start -->
+            <div class="w-full fixedHeader eff">
+                <div class="flex w-10/12 mx-auto h-16 justify-between headerBox">
+                    <div class="mx-4 hidden lg:flex justify-center items-center">
+
+                        <!-- logo -->
+                        <img class="w-12 h-12 mx-2" src="./../assets/img/landing/Course.png" alt="">
+                        <!-- logo -->
+
+                        <!-- menu -->
+                        <ul
+                            class="flex w-full text-sm xl:text-lg h-full gap-2 justify-center items-center list-none dark:text-white text-gray-800 z-10">
+                            <!-- menu with sub menu -->
+                            <li class="menuItem relative p-2 hover:text-white transition cursor-pointer rounded-lg">
+                                <a href="">صفحه اصلی</a>
+                                <div class="menuHover">
+                                    <ul class="text-sm">
+                                        <li class="hover:bg-black/30 hover:text-white transition cursor-pointer">
+                                            <a href="">صفحه اصلی 1</a>
+                                        </li>
+                                        <li class="hover:bg-black/30 hover:text-white transition cursor-pointer">
+                                            <a href="">صفحه اصلی 2</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- menu with sub menu -->
+
+                            <!-- menu with out sub menu -->
+                            <li class="menuItem relative p-2 hover:text-white transition cursor-pointer rounded-lg">
+                                <a href="">دوره ها</a>
+                            </li>
+                            <!-- menu with out sub menu -->
+
+                            <li class="menuItem relative p-2 hover:text-white transition cursor-pointer rounded-lg">
+                                <a href="">مقالات</a>
+                            </li>
+                            <li class="menuItem relative p-2 hover:text-white transition cursor-pointer rounded-lg">
+                                <a href="">پادکست</a>
+                            </li>
+                            <li class="menuItem relative p-2 hover:text-white transition cursor-pointer rounded-lg">
+                                <a href="">همکاری</a>
+                            </li>
+                            <li class="menuItem relative p-2 hover:text-white transition cursor-pointer rounded-lg">
+                                <a href="">تماس با ما</a>
+                            </li>
+                            <li class="menuItem relative p-2 hover:text-white transition cursor-pointer rounded-lg">
+                                <a href="">درباره ما</a>
+                            </li>
+                        </ul>
+                        <!-- menu -->
+
+                    </div>
+
+                    <!-- menu mobile btn  -->
+                    <div class="flex h-full justify-center items-center lg:hidden mx-4">
+                        <img onclick="toggleMenuMobile()" class="w-8 h-8 darkMenuBtn  cursor-pointer"
+                            src="./../assets/img/landing/menuDark.png" alt="">
+                        <img onclick="toggleMenuMobile()" class="w-8 h-8 lightMenuBtn  cursor-pointer"
+                            src="./../assets/img/landing/menuLight.png" alt="">
+                    </div>
+                    <!-- menu mobile btn  -->
+
+
+
+                    <div class="flex h-full justify-center items-center">
+
+                        <!-- language -->
+                        <div
+                            class="flex h-full languageItem justify-center items-center cursor-pointer text-gray-800 dark:text-white mx-2">
+
+                            <!-- current language -->
+                            <img class="w-6" src="./../assets/img/landing/language/afghanistan.png" alt="">
+                            <span class="mx-2">دری</span>
+                            <!-- current language -->
+
+                            <!-- language list -->
+                            <ul class="languageHover text-sm">
+
+                                <!-- language item -->
+                                <li
+                                    class=" flex justify-start text-white items-center py-2 px-4 hover:bg-black/30 hover:text-white transition cursor-pointer">
+                                    <img class="w-4" src="./../assets/img/landing/language/afghanistan.png" alt="">
+                                    <span class="mx-2">دری</span>
+                                </li>
+                                <!-- language item -->
+
+                                <li
+                                    class=" flex justify-start text-white items-center py-2 px-4 hover:bg-black/30 hover:text-white transition cursor-pointer">
+                                    <img class="w-4" src="./../assets/img/landing/language/afghanistan.png" alt="">
+                                    <span class="mx-2">پشتو</span>
+                                </li>
+
+                                <li
+                                    class=" flex justify-start text-white items-center py-2 px-4 hover:bg-black/30 hover:text-white transition cursor-pointer">
+                                    <img class="w-4" src="./../assets/img/landing/language/united-states.png" alt="">
+                                    <span class="mx-2">انگلیسی</span>
+
+                                </li>
+                            </ul>
+                            <!-- language list -->
+                        </div>
+                        <!-- language -->
+
+
+                        <!-- theme btn box -->
+                        <div class="flex h-full justify-center items-center  cursor-pointer">
+                            <!-- dark -->
+                            <img class="w-8 h-8 darkBtn" src="./../assets/img/landing/dark.png" alt="">
+                            <!-- dark -->
+
+                            <!-- light -->
+                            <img class="w-8 h-8 lightBtn" src="./../assets/img/landing/light.png" alt="">
+                            <!-- light -->
+                        </div>
+                        <!-- theme btn box -->
+
+                        <!-- loged Out user box-->
+                        <!-- <div class="flex h-full justify-center items-center mx-4 text-white">
+                            <a class="cursor-pointer hover:bg-black/30 hover:text-pink-200 transition p-2 rounded-lg">ورود</a>
+                            &nbsp; / &nbsp;
+                            <a class="cursor-pointer hover:bg-black/30 hover:text-pink-200 transition p-2 rounded-lg">ثبت نام</a>
+                        </div> -->
+                        <!-- loged Out user box-->
+
+                        <!-- loged in user box -->
+                        <div class="flex h-full justify-center items-center mx-4 text-white z-10">
+                            <div class="cursor-pointer p-2 rounded-lg profile">
+
+                                <!-- hover box -->
+                                <div class="profileDropDownMenu">
+
+                                    <!-- user png -->
+                                    <div class="flex justify-center items-center w-12 h-12">
+                                        <img class="w-9/12 h-9/12 block dark:hidden"
+                                            src="./../assets/img/landing/user.png" alt="">
+                                        <img class="w-9/12 h-9/12 hidden dark:block"
+                                            src="./../assets/img/landing/userDark.png" alt="">
+                                    </div>
+                                    <!-- user png -->
+
+
+
+                                    <ul class="profileDropDown">
+                                        <!-- first item -->
+                                        <li class="firstnm">
+                                            <a href="">پروفایل</a>
+                                        </li>
+                                        <!-- first item -->
+
+                                        <li>
+                                            <a href="">تعویض رمز عبور</a>
+                                        </li>
+                                        <li>
+                                            <a href="">دوره ها</a>
+                                        </li>
+
+                                        <!-- last item -->
+                                        <li class="lastnm">
+                                            <a href="">خروج</a>
+                                        </li>
+                                        <!-- last item -->
+
+                                    </ul>
+                                </div>
+                                <!-- hover box -->
+
+                            </div>
+                        </div>
+                        <!-- loged in user box -->
+
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Header End -->
+        </div>
+
+
+
+
+
+
+
+        <!-- start Content -->
+        <div class="w-full h-auto mx-auto Container">
+
+            <!-- start new Question -->
+
+            <div class="mb-24">
+                <div class="flex flex-col md:flex-row w-11/12 mx-auto">
+
+                    <!-- newQuestion Content -->
+                    <div
+                        class="flex flex-col w-full text-white wow animate__animated animate__fadeInRight border-box mx-2">
+
+                        <!-- comment -->
+                        <div id="courseComment"
+                            class="flex relative flex-col w-full my-8 justify-center items-center wow animate__animated animate__fadeInRight commentPageBgContainer py-8  glassBoxShadow text-gray-800 dark:text-white"
+                            data-wow-delay="0.5s">
+                            <!-- title -->
+                            <div class="flex w-11/12 mx-auto items-center">
+                                <img class="w-16 h-16" src="./../assets/img/question/newQuestion.png" alt="">
+                                <h3 class="mx-4 text-2xl">ارسال سوال</h3>
+                            </div>
+                            <!-- title -->
+
+                            <!-- send comment box -->
+                            <div class="flex w-full flex-col my-8">
+
+                                <div class="w-11/12 mx-auto py-3">
+                                    <input class="questionInput w-full h-10 px-2 py-1 border-box" type="text"
+                                        placeholder="سوال خود را وارد کنید" />
+                                </div>
+
+                                <!-- ck editor -->
+                                <div class="w-11/12 mx-auto py-6">
+                                    <span class="block w-full h-64 bg-blue-100">ckeditor</span>
+                                </div>
+                                <!-- ck editor -->
+
+
+                                <!-- captcha -->
+                                <div class="w-11/12 mx-auto ">
+                                    <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW">
+                                    </div>
+                                </div>
+                                <!-- captcha -->
+
+                                <!-- send btn -->
+                                <div class="w-11/12 mx-auto py-6" style="direction:ltr">
+                                    <button class="cmBtn">
+                                        <div class="svg-wrapper-1">
+                                            <div class="svg-wrapper">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                                    height="24">
+                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                    <path fill="currentColor"
+                                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <span>ارسال</span>
+                                    </button>
+                                </div>
+                                <!-- send btn -->
+                            </div>
+                            <!-- send comment box -->
+
+                        </div>
+                        <!-- comment -->
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- end new Question -->
+
+        </div>
+
+        <!-- end Content -->
+
+
+        <!-- start footer -->
+        <div class="footerBg">
+            <div
+                class="flex w-full flex-wrap justify-between backdrop-blur-sm bg-black/30 shadow wow animate__animated animate__fadeIn">
+
+                <!-- footer link box -->
+                <div class="w-full md:w-6/12 lg:w-3/12 h-72 flex flex-col justify-center items-center wow animate__animated animate__fadeInUp"
+                    data-wow-delay="0.5s">
+                    <h4 class="w-full text-xl text-white p-4">دسترسی سریع</h4>
+                    <ul class="flex flex-col w-11/12 mx-auto text-lg text-white justify-center text-center">
+                        <li class="py-2 cursor-pointer footerLinkHover">
+                            خانه</li>
+                        <li class="py-2 cursor-pointer footerLinkHover">
+                            دوره ها</li>
+                        <li class="py-2 cursor-pointer footerLinkHover">
+                            مقالات</li>
+                        <li class="py-2 cursor-pointer footerLinkHover">
+                            درباره ما</li>
+                        <li class="py-2 cursor-pointer footerLinkHover">
+                            تماس با ما</li>
+                    </ul>
+                </div>
+                <!-- footer link box -->
+
+                <!-- footer link logo and captions -->
+                <div class="flex flex-col w-full order-first md:w-full lg:w-6/12 lg:order-none  h-72 justify-center items-center wow animate__animated animate__fadeInUp"
+                    data-wow-delay="0.5s">
+                    <div class="w-full flex justify-center items-center">
+                        <img class="w-28" src="./../assets/img/landing/Course.png" alt="">
+                    </div>
+
+                    <div class="backdrop-blur-xs bg-black/30 shadow p-4 border-box w-full h-auto mt-4  rounded-xl">
+                        <p class="w-full text-center text-white">وقتی دیدیم بعد از سال ها تحصیل در دانشگاه ها هیچ
+                            دانش
+                            کاربردی برای بازار کار وجود نداره و معمولا
+                            دانشجوها برای پیداکردن کار به علت نداشتن مهارت ناموفق هستند، ایده راه اندازی یک سایت
+                            آموزشی
+                            مهارت محور به ذهنمون خطور کرد و این شد که آریاتک به وجود آمد.
+                        </p>
+                    </div>
+                </div>
+                <!-- footer link logo and captions -->
+
+                <!-- footer social media -->
+                <div class="flex justify-center items-center flex-col w-full md:w-6/12 lg:w-3/12  h-72 wow animate__animated animate__fadeInUp"
+                    data-wow-delay="0.5s">
+                    <div class="mb-4">
+                        <a href="">
+                            <img class="icon w-10 h-10" src="./../assets/img/landing/telegram.png" alt="">
+                        </a>
+                        <a href="">
+                            <img class="icon w-10 h-10 insta" src="./../assets/img/landing/instagram.png" alt="">
+                        </a>
+                        <a href="">
+                            <img class="icon w-10 h-10 whatsapp" src="./../assets/img/landing/whatsapp.png" alt="">
+                        </a>
+                    </div>
+                    <p class="w-full text-white text-lg text-center	mt-4">ما را در سوشال مدیا دنبال کنید</p>
+                </div>
+                <!-- footer social media -->
+
+
+            </div>
+        </div>
+        <!-- end footer -->
+
+
+    </div>
+
+    <!-- copyright -->
+    <div class="w-full bg-gray-900 text-white p-4 text-center"> تمامی حقوق مادی و معنوی این سایت متعلق به آریاتک می
+        باشد
+        و هرگونه کپی
+        برداری غیرقانونی محسوب خواهد شد </div>
+    <!-- fcopyright -->
+
+
+    <div class="scrollToTopBtn scrollToTop flex justify-center items-center">
+        <img class="w-6/12" src="./../assets/img/landing/top-arrow.png" alt="">
+    </div>
+    </div>
+
+    <script src="./../assets/js/menuMobileAccordion.js"></script>
+
+    <script src="./../assets/js/scrollToTop.js"></script>
+    <script src="./../assets/js/sticky.js"></script>
+    <script src="./../assets/js/scrollIntoView.js"></script>
+    <script src="./../assets/js/accordion.js"></script>
+    <script src="./../assets/js/fixedHeader.js"></script>
+
+</body>
+
+
+</html>

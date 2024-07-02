@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./../../dist/css/output.css" rel="stylesheet" />
+    <link href="./../assets/css/animate.css" rel="stylesheet" />
+    <link href="./../assets/css/font.css" rel="stylesheet" />
+    <link href="./../assets/css/auth.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+
+    <title>ثبت نام</title>
+</head>
+
+<body>
+    <div class="dark">
+
+        <form action="" onsubmit="process(event)">
+            <div class=" authBox py-16">
+
+                <!-- page circle effect -->
+                <span id="cardWrap" class="authCircle"></span>
+                <span id="cardWrap1" class="authCircle"></span>
+                <span id="cardWrap2" class="authCircle"></span>
+                <span id="cardWrap3" class="authCircle"></span>
+                <span id="cardWrap4" class="authCircle"></span>
+                <span id="cardWrap5" class="authCircle"></span>
+                <!-- page circle effect -->
+
+                <!-- card effect -->
+                <div class="authBackEffect marginTop5 flex w-full h-full justify-center items-center">
+                    <div class="relative authBackEffectBox mt-4">
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                        <span class="bg-pic"></span>
+                    </div>
+                </div>
+                <!-- card effect -->
+
+                <!-- register card -->
+                <div class="w-full h-full flex flex-col justify-center items-center">
+                    <div
+                        class="flex flex-col justify center items-center w-72 sm:w-96 bg-blur-auth h-auto py-12 marginTop5">
+
+                        <!-- logo img -->
+                        <img class="w-20 h-20" style="margin-top: -100px;" src="./../assets/img/landing/Course.png"
+                            alt="">
+                        <!-- logo img -->
+
+                        <!-- title -->
+                        <div class="w-full flex justify-start items-center  text-white text-2xl mb-4 p-8">
+                            <h3>ثبت نام</h3>
+                        </div>
+                        <!-- title -->
+
+                        <!-- input box -->
+                        <div class="flex flex-col justify-center items-center p-2">
+                            <input class="authInput w-56 sm:w-72 h-12 border-box p-4 text-center text-white" type="text"
+                                placeholder="نام و تخلص">
+                        </div>
+                        <!-- input box -->
+
+                        <!-- input box -->
+                        <div class="flex flex-col justify-center items-center p-2">
+                            <input class="authInput w-56 sm:w-72 h-12 border-box p-4 text-center text-white"
+                                type="email" placeholder="ایمیل">
+                        </div>
+                        <!-- input box -->
+
+                        <!-- input box -->
+                        <div class="flex flex-col justify-center items-center p-2">
+                            <input id="phone" type="tel" name="phone"
+                                class="authInput w-56 sm:w-72 h-12 border-box p-4 text-center text-white relative"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                        </div>
+                        <!-- input box -->
+
+                        <!-- input box -->
+                        <div class="flex flex-col justify-center items-center p-2">
+                            <input class="authInput w-56 sm:w-72 h-12 border-box p-4 text-center text-white"
+                                type="password" placeholder="رمز عبور">
+                        </div>
+                        <!-- input box -->
+
+                        <!-- input box -->
+                        <div class="flex flex-col justify-center items-center p-2">
+                            <input class="authInput w-56 sm:w-72 h-12 border-box p-4 text-center text-white"
+                                type="password" placeholder="تکرار رمز عبور">
+                        </div>
+                        <!-- input box -->
+
+                        <!-- register btn -->
+                        <div class="flex w-full justify-center items-center p-4 text-white">
+                            <button class="authBtn h-12 w-6/12">ثبت نام</button>
+                        </div>
+                        <!-- register btn -->
+
+                        <!-- login link -->
+                        <div class="flex w-full justify-center items-center text-sm text-white px-4 mt-8">
+                            <a href="#">آیا اکانت خود را به یاد دارید؟ ورود </a>
+                        </div>
+                        <!-- login link -->
+
+                    </div>
+                </div>
+
+
+                <!-- register card -->
+
+
+            </div>
+        </form>
+    </div>
+
+    <script src="./../assets/js/auth.js"></script>
+
+
+
+    <script>
+        // Handle international prefixes, format phone input field
+        // Uses intl-tel-input plugin
+        const phoneInputField = document.querySelector("#phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            // https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+            preferredCountries: ["af", "co", "in", "de"],
+            utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+
+        const info = document.querySelector(".alert-info");
+        const error = document.querySelector(".alert-error");
+
+        function process(event) {
+            event.preventDefault();
+
+            const phoneNumber = phoneInput.getNumber();
+
+            info.style.display = "none";
+            error.style.display = "none";
+
+            // OPTION 1 - Twilio Lookup API
+            // Pros: Free API call, updated data
+            // Pros: The Lookup API can return line type and carrier info too: https://www.twilio.com/docs/lookup/api
+            // Cons: Network request
+            const data = new URLSearchParams();
+            data.append("phone", phoneNumber);
+
+            fetch("./lookup", {
+                method: 'POST',
+                body: data
+            })
+                .then(response => response.json())
+                .then(json => {
+                    if (json.success) {
+                        info.style.display = "";
+                        info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`
+                    } else {
+                        console.log(json.error);
+                        error.style.display = "";
+                        error.innerHTML = `Invalid phone number.`
+                    }
+                })
+                .catch(err => {
+                    error.style.display = "";
+                    error.innerHTML = `Something went wrong: ${err}`
+                });
+
+            // OPTION 2 - intl-tel-input validity check
+            // Pros: No additional API call
+            // Cons: Requires plugin updates for updates on phone number validity
+            // if (phoneInput.isValidNumber()) {
+            //   info.style.display = "";
+            //   info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`
+            // } else {
+            //   error.style.display = "";
+            //   error.innerHTML = `Invalid phone number.`
+            // }
+        }
+
+        const form = document.getElementById("lookup");
+        form.addEventListener("submit", process);
+    </script>
+
+
+
+</body>
+
+</html>

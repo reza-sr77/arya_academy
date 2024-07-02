@@ -1,0 +1,220 @@
+.modalTransition {
+    transition: 0.5s;
+}
+
+#modalContainer::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    /* make scrollbar transparent */
+}
+
+/* search box */
+.courseListSearch-box {
+    background: #fdfdfd;
+    overflow: hidden;
+    height: 50px;
+    border-radius: 60px;
+}
+
+.dark .courseListSearch-box {
+    background: #0b1121;
+}
+
+.courseListSearch-input {
+    background: transparent;
+    color: #444;
+    outline: none;
+    border: none;
+    line-height: 40px;
+    width: 0px;
+    height: 100%;
+    float: left;
+    font-size: 14px;
+    transition: 0.7s ease;
+}
+
+.dark .courseListSearch-input {
+    color: #fff;
+}
+
+
+.courseListSearch-input::placeholder {
+    color: #444;
+}
+
+.dark .courseListSearch-input::placeholder {
+    color: #fff;
+}
+
+.courseListSearch-input {
+    width: 200px;
+}
+
+.courseListSearch-input:focus {
+    width: 240px;
+    margin: 0px 8px;
+}
+
+.course-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-out;
+}
+
+
+.season-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+
+
+.courseInfo-panel {
+    max-height: 300px;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+
+
+
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+
+
+/* From uiverse.io by @kirzin */
+.courseInfoShowMore {
+    text-decoration: none;
+    position: absolute;
+    border: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #fff;
+    width: 9em;
+    height: 3em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.courseInfoShowMore:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+@keyframes ani {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+.courseInfoShowMore:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.courseInfoShowMore:hover::before {
+    filter: blur(20px);
+}
+
+.courseInfoShowMore:active {
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+}
+
+/* download btn */
+.cssbuttons-io-button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.5em 0.8em 1.2em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(0deg, rgba(77, 54, 208, 1) 0%, rgba(132, 116, 254, 1) 100%);
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    transition: 0.3s;
+}
+
+.cssbuttons-io-button svg {
+    margin-right: 8px;
+}
+
+.cssbuttons-io-button:hover {
+    /* box-shadow: 0 0.5em 1.5em -0.5em #4d36d0be; */
+    transform: scale(0.96);
+}
+
+.cssbuttons-io-button:active {
+    box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
+}
+
+.linkBtnHover {
+    transition: 0.3s;
+}
+
+.linkBtnHover:hover {
+    transform: translateY(3px);
+}
+
+/* fixed Nav Bars */
+.fixedNavBars {
+    z-index: 500;
+    width: 100%;
+}
+
+.fixedNavBars ul li:hover {
+    opacity: 0.9;
+    color: #0b1121;
+}
+
+@media screen and (min-width:1500px) {
+    .fixedNavBars {
+        max-width: 1375px;
+    }
+}
+
+/* icon */
+.CoursePageInfo i {
+    font-size: 26px;
+}
+
+
+#courseInfoItems {
+    font-size: 14px;
+}

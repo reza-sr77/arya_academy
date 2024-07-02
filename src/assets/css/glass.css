@@ -1,0 +1,56 @@
+.glassBgContainer {
+    background-color: rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.glassBg {
+    background: rgba(72, 72, 72, 0.23);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 7px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 5px -2px #151515;
+}
+
+.dark .glassBg {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 5px -2px #606060;
+}
+
+.sideBarItem {
+    background: rgb(181 181 181 / 23%);
+-webkit-backdrop-filter: blur(5px);
+backdrop-filter: blur(5px);
+border-radius: 7px;
+transition: 0.3s;
+box-shadow: 0px 0px 5px -3px #222;
+}
+
+.dark .sideBarItem {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 6px -3px #d5d5d5;
+}
+
+
+.glassBg-contrary {
+    background: rgb(181 181 181 / 23%);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(5px);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.dark .glassBg-contrary {
+    background: rgb(181 181 181 / 23%);
+}
+
+.glassBoxShadow{
+    box-shadow: 0px 0px 5px -2px #353535;
+}
+
+.dark .glassBoxShadow{
+    box-shadow: 0px 0px 5px -2px #131313;
+}

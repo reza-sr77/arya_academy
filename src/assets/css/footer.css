@@ -1,0 +1,65 @@
+/* footer */
+
+.icon {
+    display: inline-block;
+    animation: float 5s ease-in-out infinite;
+}
+
+.insta {
+    animation-delay: 1s;
+}
+
+.whatsapp {
+    animation-delay: 2s;
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.footerLinkHover {
+    transition: 0.4s;
+    background: url('./../img/landing/arrow-left.png') 130% 8px no-repeat;
+    border-radius: 50px;
+}
+
+.footerLinkHover:hover {
+    background: url('./../img/landing/arrow-left.png') 95% 8px no-repeat;
+    background-size: 30px;
+    backdrop-filter: blur(5px);
+}
+
+
+.scrollToTopBtn img {
+    animation: float3 2s linear infinite;
+}
+
+@keyframes float3 {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(3px);
+    }
+
+    75% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

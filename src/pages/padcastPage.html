@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./../../dist/css/output.css" rel="stylesheet" />
+    <link href="./../assets/css/padcastPage.css" rel="stylesheet" />
+    <link href="./../assets/css/bgContainer.css" rel="stylesheet" />
+    <link href="./../assets/css/glass.css" rel="stylesheet" />
+    <link href="./../assets/css/comment.css" rel="stylesheet" />
+    <link href="./../assets/css/header.css" rel="stylesheet" />
+    <link href="./../assets/css/footer.css" rel="stylesheet" />
+    <link href="./../assets/css/animate.css" rel="stylesheet" />
+    <link href="./../assets/css/font.css" rel="stylesheet" />
+    <link href="./../assets/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <title>صفحه پادکست</title>
+</head>
+
+<script src="./../assets/js/menuMobile.js"></script>
+<script src="./../assets/js/filter.js"></script>
+<script src="./../assets/js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+<script src='https://www.google.com/recaptcha/api.js?hl=fa'></script>
+
+
+<body class="dark">
+
+    <div class="overflow-hidden">
+
+        <!-- menu mobile start -->
+        <div id="menuMobileBack" class="menuMobileBack cursor-pointer" onclick="toggleMenuMobile()">
+        </div>
+        <div id="menuMobileBox" class="z-10 menuMobileBox">
+            <div class="flex flex-row items-center py-4 justify-between">
+
+                <!-- menu mobile logo -->
+                <img class="w-12 h-12 mx-2" src="./../assets/img/landing/Course.png" alt="">
+                <!-- menu mobile logo -->
+
+                <!-- menu mobile title -->
+                <span class="text-white"> آموزشگاه</span>
+                <!-- menu mobile title -->
+
+                <!-- menu mobile close icon -->
+                <img onclick="toggleMenuMobile()" class="w-12 h-12 mx-2 cursor-pointer"
+                    src="./../assets/img/landing/close.png" alt="">
+                <!-- menu mobile close icon -->
+
+            </div>
+            <!-- menu mobile box -->
+            <ul
+                class="flex flex-col w-full h-full gap-2 justify-start items-center list-none dark:text-white text-gray-200">
+
+                <!-- menu item with sub menu-->
+                <li
+                    class="accordion flex flex-col menuItem p-2 hover:bg-black/30 hover:text-white transition cursor-pointer px-4 w-full">
+                    <div class="w-full flex items-center ">
+                        <img class="w-8 h-8" src="./../assets/img/landing/menuMobile/home.png" alt="">
+                        <a class="mx-2">صفحه اصلی</a>
+                    </div>
+                </li>
+                <!-- menu item with sub menu-->
+
+                <!-- sub Menu -->
+                <div class="panel flex flex-col w-11/12 bg-gray-500 rounded-lg text-white">
+                    <a class="w-full text-center p-4 hover:bg-gray-900" href="">صفحه اصلی 1</a>
+                    <a class="w-full text-center p-4 hover:bg-gray-900" href="">صفحه اصلی 2</a>
+                </div>
+                <!-- sub Menu -->
+
+                <!-- menu item with out sub menu-->
+                <li
+                    class="flex menuItem items-center p-2 hover:bg-black/30 hover:text-white transition cursor-pointer px-4 w-full">
+                    <img class="w-8 h-8" src="./../assets/img/landing/menuMobile/online-education.png" alt="">
+                    <a class="mx-2" href="">دوره ها</a>
+                </li>
+                <!-- menu item with out sub menu-->
+
+                <li
+                    class="flex menuItem items-center p-2 hover:bg-black/30 hover:text-white transition cursor-pointer px-4 w-full">
+                    <img class="w-8 h-8" src="./../assets/img/landing/menuMobile/article.png" alt="">
+                    <a class="mx-2" href="">مقالات</a>
+                </li>
+                <li
+                    class="flex menuItem items-center p-2 hover:bg-black/30 hover:text-white transition cursor-pointer px-4 w-full">
+                    <img class="w-8 h-8" src="./../assets/img/landing/menuMobile/podcast.png" alt="">
+                    <a class="mx-2" href="">پادکست</a>
+                </li>
+                <li
+                    class="flex menuItem items-center p-2 hover:bg-black/30 hover:text-white transition cursor-pointer px-4 w-full">
+                    <img class="w-8 h-8" src="./../assets/img/landing/menuMobile/cooperate.png" alt="">
+                    <a class="mx-2" href="">همکاری</a>
+                </li>
+                <li
+                    class="flex menuItem items-center p-2 hover:bg-black/30 hover:text-white transition cursor-pointer px-4 w-full">
+                    <img class="w-8 h-8" src="./../assets/img/landing/menuMobile/high-five.png" alt="">
+                    <a class="mx-2" href="">تماس با ما</a>
+                </li>
+                <li
+                    class="flex menuItem items-center p-2 hover:bg-black/30 hover:text-white transition cursor-pointer px-4 w-full">
+                    <img class="w-8 h-8" src="./../assets/img/landing/menuMobile/contact.png" alt="">
+                    <a class="mx-2" href="">درباره ما</a>
+                </li>
+            </ul>
+            <!-- menu mobile box -->
+
+        </div>
+        <!-- menu mobile end -->
+
+        <div class="w-full h-16 marginText">
+
+                       <!-- Header Start -->
+                       <div class="w-full fixedHeader eff">
+                        <div class="flex w-10/12 mx-auto h-16 justify-between headerBox">
+                            <div class="mx-4 hidden lg:flex justify-center items-center">
+        
+                                <!-- logo -->
+                                <img class="w-12 h-12 mx-2" src="./../assets/img/landing/Course.png" alt="">
+                                <!-- logo -->
+        
+                                <!-- menu -->
+                                <ul
+                                    class="flex w-full text-sm xl:text-lg h-full gap-2 justify-center items-center list-none dark:text-white text-gray-800 z-10">
+                                    <!-- menu with sub menu -->
+                                    <li class="menuItem relative p-2 hover:text-white transition cursor-pointer rounded-lg">
+                                        <a href="">صفحه اصلی</a>
+                                        <div class="menuHover">
+                                            <ul class="text-sm">
+                                                <li class="hover:bg-black/30 hover:text-white transition cursor-pointer">
+                                                    <a href="">صفحه اصلی 1</a>
+                                                </li>
+                                                <li class="hover:bg-black/30 hover:text-white transition cursor-pointer">
+                                                    <a href="">صفحه اصلی 2</a>
+                                                </li>
+        
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <!-- menu with sub menu -->
+        
+                                    <!-- menu with out sub menu -->
+                                    <li class="menuItem relative p-2 hover:text-white transition cursor-pointer rounded-lg">
+                                        <a href="">دوره ها</a>
+                                    </li>
+                                    <!-- menu with out sub menu -->
+        
+                                    <li class="menuItem relative p-2 hover:text-white transition cursor-pointer rounded-lg">
+                                        <a href="">مقالات</a>
+                                    </li>
+                                    <li class="menuItem relative p-2 hover:text-white transition cursor-pointer rounded-lg">
+                                        <a href="">پادکست</a>
+                                    </li>
+                                    <li class="menuItem relative p-2 hover:text-white transition cursor-pointer rounded-lg">
+                                        <a href="">همکاری</a>
+                                    </li>
+                                    <li class="menuItem relative p-2 hover:text-white transition cursor-pointer rounded-lg">
+                                        <a href="">تماس با ما</a>
+                                    </li>
+                                    <li class="menuItem relative p-2 hover:text-white transition cursor-pointer rounded-lg">
+                                        <a href="">درباره ما</a>
+                                    </li>
+                                </ul>
+                                <!-- menu -->
+        
+                            </div>
+        
+                            <!-- menu mobile btn  -->
+                            <div class="flex h-full justify-center items-center lg:hidden mx-4">
+                                <img onclick="toggleMenuMobile()" class="w-8 h-8 darkMenuBtn  cursor-pointer"
+                                    src="./../assets/img/landing/menuDark.png" alt="">
+                                <img onclick="toggleMenuMobile()" class="w-8 h-8 lightMenuBtn  cursor-pointer"
+                                    src="./../assets/img/landing/menuLight.png" alt="">
+                            </div>
+                            <!-- menu mobile btn  -->
+        
+        
+        
+                            <div class="flex h-full justify-center items-center">
+        
+                                <!-- language -->
+                                <div
+                                    class="flex h-full languageItem justify-center items-center cursor-pointer text-gray-800 dark:text-white mx-2">
+        
+                                    <!-- current language -->
+                                    <img class="w-6" src="./../assets/img/landing/language/afghanistan.png" alt="">
+                                    <span class="mx-2">دری</span>
+                                    <!-- current language -->
+        
+                                    <!-- language list -->
+                                    <ul class="languageHover text-sm">
+        
+                                        <!-- language item -->
+                                        <li
+                                            class=" flex justify-start text-white items-center py-2 px-4 hover:bg-black/30 hover:text-white transition cursor-pointer">
+                                            <img class="w-4" src="./../assets/img/landing/language/afghanistan.png" alt="">
+                                            <span class="mx-2">دری</span>
+                                        </li>
+                                        <!-- language item -->
+        
+                                        <li
+                                            class=" flex justify-start text-white items-center py-2 px-4 hover:bg-black/30 hover:text-white transition cursor-pointer">
+                                            <img class="w-4" src="./../assets/img/landing/language/afghanistan.png" alt="">
+                                            <span class="mx-2">پشتو</span>
+                                        </li>
+        
+                                        <li
+                                            class=" flex justify-start text-white items-center py-2 px-4 hover:bg-black/30 hover:text-white transition cursor-pointer">
+                                            <img class="w-4" src="./../assets/img/landing/language/united-states.png" alt="">
+                                            <span class="mx-2">انگلیسی</span>
+        
+                                        </li>
+                                    </ul>
+                                    <!-- language list -->
+                                </div>
+                                <!-- language -->
+        
+        
+                                <!-- theme btn box -->
+                                <div class="flex h-full justify-center items-center  cursor-pointer">
+                                    <!-- dark -->
+                                    <img class="w-8 h-8 darkBtn" src="./../assets/img/landing/dark.png" alt="">
+                                    <!-- dark -->
+        
+                                    <!-- light -->
+                                    <img class="w-8 h-8 lightBtn" src="./../assets/img/landing/light.png" alt="">
+                                    <!-- light -->
+                                </div>
+                                <!-- theme btn box -->
+        
+                                <!-- loged Out user box-->
+                                <!-- <div class="flex h-full justify-center items-center mx-4 text-white">
+                        <a class="cursor-pointer hover:bg-black/30 hover:text-pink-200 transition p-2 rounded-lg">ورود</a>
+                        &nbsp; / &nbsp;
+                        <a class="cursor-pointer hover:bg-black/30 hover:text-pink-200 transition p-2 rounded-lg">ثبت نام</a>
+                    </div> -->
+                                <!-- loged Out user box-->
+        
+                                <!-- loged in user box -->
+                                <div class="flex h-full justify-center items-center mx-4 text-white z-10">
+                                    <div class="cursor-pointer p-2 rounded-lg profile">
+        
+                                        <!-- hover box -->
+                                        <div class="profileDropDownMenu">
+        
+                                            <!-- user png -->
+                                            <div class="flex justify-center items-center w-12 h-12">
+                                                <img class="w-9/12 h-9/12 block dark:hidden"
+                                                    src="./../assets/img/landing/user.png" alt="">
+                                                <img class="w-9/12 h-9/12 hidden dark:block"
+                                                    src="./../assets/img/landing/userDark.png" alt="">
+                                            </div>
+                                            <!-- user png -->
+        
+        
+        
+                                            <ul class="profileDropDown">
+                                                <!-- first item -->
+                                                <li class="firstnm">
+                                                    <a href="">پروفایل</a>
+                                                </li>
+                                                <!-- first item -->
+        
+                                                <li>
+                                                    <a href="">تعویض رمز عبور</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">دوره ها</a>
+                                                </li>
+        
+                                                <!-- last item -->
+                                                <li class="lastnm">
+                                                    <a href="">خروج</a>
+                                                </li>
+                                                <!-- last item -->
+        
+                                            </ul>
+                                        </div>
+                                        <!-- hover box -->
+        
+                                    </div>
+                                </div>
+                                <!-- loged in user box -->
+        
+        
+                            </div>
+        
+                        </div>
+                    </div>
+                    <!-- Header End -->
+        </div>
+
+
+
+
+
+
+
+        <!-- start Content -->
+        <div class="w-full h-auto mx-auto Container">
+
+            <!-- start padcastPage -->
+            <div class="mb-24 mt-12">
+                <div class="flex flex-col md:flex-row w-11/12 mx-auto">
+
+                    <!-- padcastPage -->
+                    <div
+                        class="flex flex-col w-full text-white wow animate__animated animate__fadeInRight border-box">
+
+                        <div class="flex relative flex-col text-gray-800 dark:text-white w-full  justify-center items-center wow animate__animated animate__fadeInRight glassBgContainer py-8 glassBoxShadow"
+                            data-wow-delay="0.5s">
+
+
+                            <!-- header -->
+                            <div class="w-11/12 mx-auto flex flex-wrap items-center gap-x-2">
+                                <div class="flex items-center gap-x-2">
+                                    <i class="fa fa-circle"></i>
+                                    <span>
+                                        پادکست شماره 85
+                                    </span>
+                                    <span>|</span>
+                                </div>
+                                <div class="flex items-center gap-x-2 text-sm">
+                                    <span
+                                        class="bg-gray-800 text-white dark:bg-gray-300 dark:text-gray-800 py-1 px-3 text-sm rounded-lg">#فیلم</span>
+                                    <span
+                                        class="bg-gray-800 text-white dark:bg-gray-300 dark:text-gray-800 py-1 px-3 text-sm rounded-lg">#سریال</span>
+                                </div>
+                            </div>
+                            <!-- header -->
+
+
+                            <!-- titr -->
+                            <h3 class="w-11/12 mx-auto my-6 text-xl md:text-2xl font-bold">
+                                فیلم و سریال های مناسب برنامه نویسا
+                            </h3>
+                            <!-- titr -->
+
+                            <div class="w-11/12 flex-wrap flex items-center justify-between mt-6">
+                                <div class="flex text-lg gap-x-2">
+                                    <span
+                                        class="flex items-center px-1 gap-x-1 rounded text-xs md:text-lg dark:bg-white  dark:text-gray-800 bg-gray-500 text-white">
+                                        <i class="fa fa-clock-o"></i>
+                                        10:37
+                                    </span>
+                                    <span
+                                        class="flex items-center cursor-pointer gap-x-1 text-xs md:text-lg text-red-500 bg-white hover:bg-red-700  rounded transition duration-200  hover:text-white px-1">
+                                        <i class="fa fa-heart-o"></i>
+                                        16</span>
+                                </div>
+                                <div class="flex w-full md:w-auto order-first md:order-none items-center justify-center gap-x-4 text-4xl">
+
+                                    <span class="text-xs md:text-lg mt-2" id="totalTime">00:03:24</span>
+
+                                    <button class="nextBtn" type="button" onclick="forwardAudio()">
+                                        <i class="fa fa-forward" aria-hidden="true"></i>
+                                    </button>
+
+                                    <button id="playBtn" class="playBtn flex items-center justify-center" type="button"
+                                        onclick="playsong()">
+                                        <i class="fa fa-play-circle flex"></i>
+                                    </button>
+
+                                    <button id="pauseBtn" class="stopBtn flex items-center justify-center hidden"
+                                        type="button" onclick="pausesong()">
+                                        <i class="fa fa-pause-circle flex"></i>
+                                    </button>
+
+                                    <button class="stopBtn flex items-center justify-center" type="button"
+                                        onclick="stopsong()">
+                                        <i class="fa fa-stop-circle flex"></i>
+                                    </button>
+
+                                    <button class="backBtn" type="button" onclick="backwardAudio()">
+                                        <i class="fa fa-backward" aria-hidden="true"></i>
+                                    </button>
+
+                                    <span class="text-xs md:text-lg mt-2" id="currentTime">00:00:00</span>
+
+                                </div>
+                                <a href="#"
+                                    class="bg-gray-800 text-white dark:bg-white dark:text-gray-800 py-1 px-3 text-xs md:text-lg rounded-lg transition hover:scale-x-110">
+                                    دانلود
+                                    <i class="fa fa-download"></i>
+                                </a>
+                            </div>
+
+                            <div class="w-11/12 mx-auto my-8">
+                                <div class="container">
+                                    <div class="w-11/12 mx-auto flex" style="direction:ltr ;">
+                                        <input class="w-full cursor-pointer" type="range" id="progress_player" min="0"
+                                            max="100" value="0" step="0.5" onchange="setnewTime(this.value)">
+                                    </div>
+                                    <audio id="player" class="hidden" controls preload="none">
+                                        <source
+                                            src="https://dl.ganja2music.com/Ganja2Music/Archive/A/Alireza%20Talischi/Single/Alireza%20Talischi%20-%20Ghaf.mp3"
+                                            type="audio/ogg">
+                                    </audio>
+
+                                </div>
+                            </div>
+
+
+                            <div class="w-11/12 mx-auto my-4 glassBg p-8 text-xs md:text-lg">
+                                <p class="w-full text-justify">
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+                                    گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
+                                    برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
+                                    می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+                                    متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+                                    الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان
+                                    مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+                                    طراحی اساسا مورد استفاده قرار گیرد.
+                                </p>
+                            </div>
+
+
+
+                        </div>
+                        <!-- padcastPage Content -->
+
+                        <!-- padcastPage suggest -->
+                        <div class="flex relative text-gray-800 dark:text-white flex-col w-full my-8 justify-center items-center wow animate__animated animate__fadeInRight glassBgContainer py-8 glassBoxShadow"
+                            data-wow-delay="0.5s">
+
+                            <h4 class="w-full px-4 text-xl">پادکست های پیشنهادی</h4>
+
+
+                            <ul class="w-11/12 mx-auto my-8 flex flex-col">
+                                <li class="flex flex-col md:flex-row items-center justify-between w-full  glassBg p-6 my-4">
+                                    <div class="flex flex-col md:flex-row  justify-center items-center gap-x-8">
+                                        <div
+                                            class="flex flex-col justify-center items-center border border-gray-300 p-4 rounded-lg">
+                                            <img class="w-8 h-8" src="./../assets/img/padcastList/voice-search.png"
+                                                alt="">
+                                            <span class="text-sm mt-4">شماره 10</span>
+                                        </div>
+                                        <div class="flex flex-col gap-y-2 h-full justify-center mt-4 md:mt-0">
+                                            <h3 class="text-lg md:text-2xl text-bold">حقوق برنامه نویسان و درآمد ارزی</h3>
+                                            <div
+                                                class="flex text-blue-800 dark:text-blue-600 text-sm py-2 px-3 transition hover:text-white">
+                                                <a class="flex items-center" href="">
+                                                    برای گوش کردن کلیک کنید
+                                                    <i class="text-sm fa fa-play-circle px-2"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row md:flex-col gap-x-2 w-full md:w-auto justify-center items-center text-sm gap-y-2 mt-4 md:mt-0">
+                                        <span
+                                            class="flex items-center px-1 gap-x-1 rounded text-sm md:text-lg dark:bg-gray-500 dark:bg-opacity-10 dark:text-gray-200 bg-gray-500 bg-opacity-10 text-gray-800">
+                                            <i class="fa fa-clock-o"></i>
+                                            10:37
+                                        </span>
+                                        <span
+                                            class="flex items-center cursor-pointer gap-x-1 text-sm md:text-lg text-red-500 bg-red-700 bg-opacity-20 rounded transition duration-200 hover:bg-opacity-100 hover:text-white px-1">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                            16</span>
+                                    </div>
+                                </li>
+
+
+
+                                <li class="flex flex-col md:flex-row items-center justify-between w-full  glassBg p-6 my-4">
+                                    <div class="flex flex-col md:flex-row  justify-center items-center gap-x-8">
+                                        <div
+                                            class="flex flex-col justify-center items-center border border-gray-300 p-4 rounded-lg">
+                                            <img class="w-8 h-8" src="./../assets/img/padcastList/voice-search.png"
+                                                alt="">
+                                            <span class="text-sm mt-4">شماره 10</span>
+                                        </div>
+                                        <div class="flex flex-col gap-y-2 h-full justify-center mt-4 md:mt-0">
+                                            <h3 class="text-lg md:text-2xl text-bold">حقوق برنامه نویسان و درآمد ارزی</h3>
+                                            <div
+                                                class="flex text-blue-800 dark:text-blue-600 text-sm py-2 px-3 transition hover:text-white">
+                                                <a class="flex items-center" href="">
+                                                    برای گوش کردن کلیک کنید
+                                                    <i class="text-sm fa fa-play-circle px-2"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row md:flex-col gap-x-2 w-full md:w-auto justify-center items-center text-sm gap-y-2 mt-4 md:mt-0">
+                                        <span
+                                            class="flex items-center px-1 gap-x-1 rounded text-sm md:text-lg dark:bg-gray-500 dark:bg-opacity-10 dark:text-gray-200 bg-gray-500 bg-opacity-10 text-gray-800">
+                                            <i class="fa fa-clock-o"></i>
+                                            10:37
+                                        </span>
+                                        <span
+                                            class="flex items-center cursor-pointer gap-x-1 text-sm md:text-lg text-red-500 bg-red-700 bg-opacity-20 rounded transition duration-200 hover:bg-opacity-100 hover:text-white px-1">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                            16</span>
+                                    </div>
+                                </li>
+
+
+
+                                <li class="flex flex-col md:flex-row items-center justify-between w-full  glassBg p-6 my-4">
+                                    <div class="flex flex-col md:flex-row  justify-center items-center gap-x-8">
+                                        <div
+                                            class="flex flex-col justify-center items-center border border-gray-300 p-4 rounded-lg">
+                                            <img class="w-8 h-8" src="./../assets/img/padcastList/voice-search.png"
+                                                alt="">
+                                            <span class="text-sm mt-4">شماره 10</span>
+                                        </div>
+                                        <div class="flex flex-col gap-y-2 h-full justify-center mt-4 md:mt-0">
+                                            <h3 class="text-lg md:text-2xl text-bold">حقوق برنامه نویسان و درآمد ارزی</h3>
+                                            <div
+                                                class="flex text-blue-800 dark:text-blue-600 text-sm py-2 px-3 transition hover:text-white">
+                                                <a class="flex items-center" href="">
+                                                    برای گوش کردن کلیک کنید
+                                                    <i class="text-sm fa fa-play-circle px-2"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row md:flex-col gap-x-2 w-full md:w-auto justify-center items-center text-sm gap-y-2 mt-4 md:mt-0">
+                                        <span
+                                            class="flex items-center px-1 gap-x-1 rounded text-sm md:text-lg dark:bg-gray-500 dark:bg-opacity-10 dark:text-gray-200 bg-gray-500 bg-opacity-10 text-gray-800">
+                                            <i class="fa fa-clock-o"></i>
+                                            10:37
+                                        </span>
+                                        <span
+                                            class="flex items-center cursor-pointer gap-x-1 text-sm md:text-lg text-red-500 bg-red-700 bg-opacity-20 rounded transition duration-200 hover:bg-opacity-100 hover:text-white px-1">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                            16</span>
+                                    </div>
+                                </li>
+
+
+                                <li class="flex flex-col md:flex-row items-center justify-between w-full  glassBg p-6 my-4">
+                                    <div class="flex flex-col md:flex-row  justify-center items-center gap-x-8">
+                                        <div
+                                            class="flex flex-col justify-center items-center border border-gray-300 p-4 rounded-lg">
+                                            <img class="w-8 h-8" src="./../assets/img/padcastList/voice-search.png"
+                                                alt="">
+                                            <span class="text-sm mt-4">شماره 10</span>
+                                        </div>
+                                        <div class="flex flex-col gap-y-2 h-full justify-center mt-4 md:mt-0">
+                                            <h3 class="text-lg md:text-2xl text-bold">حقوق برنامه نویسان و درآمد ارزی</h3>
+                                            <div
+                                                class="flex text-blue-800 dark:text-blue-600 text-sm py-2 px-3 transition hover:text-white">
+                                                <a class="flex items-center" href="">
+                                                    برای گوش کردن کلیک کنید
+                                                    <i class="text-sm fa fa-play-circle px-2"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row md:flex-col gap-x-2 w-full md:w-auto justify-center items-center text-sm gap-y-2 mt-4 md:mt-0">
+                                        <span
+                                            class="flex items-center px-1 gap-x-1 rounded text-sm md:text-lg dark:bg-gray-500 dark:bg-opacity-10 dark:text-gray-200 bg-gray-500 bg-opacity-10 text-gray-800">
+                                            <i class="fa fa-clock-o"></i>
+                                            10:37
+                                        </span>
+                                        <span
+                                            class="flex items-center cursor-pointer gap-x-1 text-sm md:text-lg text-red-500 bg-red-700 bg-opacity-20 rounded transition duration-200 hover:bg-opacity-100 hover:text-white px-1">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                            16</span>
+                                    </div>
+                                </li>
+
+
+                                <li class="flex flex-col md:flex-row items-center justify-between w-full  glassBg p-6 my-4">
+                                    <div class="flex flex-col md:flex-row  justify-center items-center gap-x-8">
+                                        <div
+                                            class="flex flex-col justify-center items-center border border-gray-300 p-4 rounded-lg">
+                                            <img class="w-8 h-8" src="./../assets/img/padcastList/voice-search.png"
+                                                alt="">
+                                            <span class="text-sm mt-4">شماره 10</span>
+                                        </div>
+                                        <div class="flex flex-col gap-y-2 h-full justify-center mt-4 md:mt-0">
+                                            <h3 class="text-lg md:text-2xl text-bold">حقوق برنامه نویسان و درآمد ارزی</h3>
+                                            <div
+                                                class="flex text-blue-800 dark:text-blue-600 text-sm py-2 px-3 transition hover:text-white">
+                                                <a class="flex items-center" href="">
+                                                    برای گوش کردن کلیک کنید
+                                                    <i class="text-sm fa fa-play-circle px-2"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row md:flex-col gap-x-2 w-full md:w-auto justify-center items-center text-sm gap-y-2 mt-4 md:mt-0">
+                                        <span
+                                            class="flex items-center px-1 gap-x-1 rounded text-sm md:text-lg dark:bg-gray-500 dark:bg-opacity-10 dark:text-gray-200 bg-gray-500 bg-opacity-10 text-gray-800">
+                                            <i class="fa fa-clock-o"></i>
+                                            10:37
+                                        </span>
+                                        <span
+                                            class="flex items-center cursor-pointer gap-x-1 text-sm md:text-lg text-red-500 bg-red-700 bg-opacity-20 rounded transition duration-200 hover:bg-opacity-100 hover:text-white px-1">
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                            16</span>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+
+
+                        </div>
+                        <!-- padcastPage suggest -->
+
+
+                        <!-- comment -->
+                        <div id="courseComment"
+                            class="flex relative flex-col w-full my-8 justify-center items-center wow animate__animated animate__fadeInRight glassBgContainer py-8 glassBoxShadow text-gray-800 dark:text-white"
+                            data-wow-delay="0.5s">
+                            <!-- title -->
+                            <div class="flex w-11/12 mx-auto items-center">
+                                <img class="w-16 h-16" src="./../assets/img/coursePage/feedback.png" alt="">
+                                <h3 class="mx-4 text-2xl">نظرات کاربران این دوره</h3>
+                            </div>
+                            <!-- title -->
+
+                            <!-- send comment box -->
+                            <div class="flex w-full flex-col my-8">
+                                <span class="px-6">نظر خود را وارد کنید</span>
+
+
+                                <!-- ck editor -->
+                                <div class="w-11/12 mx-auto py-6">
+                                    <span class="block w-full h-64 bg-blue-100">ckeditor</span>
+                                </div>
+                                <!-- ck editor -->
+
+
+                                <!-- captcha -->
+                                <div class="w-11/12 mx-auto ">
+                                    <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW">
+                                    </div>
+                                </div>
+                                <!-- captcha -->
+
+                                <!-- send btn -->
+                                <div class="w-11/12 mx-auto py-6" style="direction:ltr">
+                                    <button class="cmBtn">
+                                        <div class="svg-wrapper-1">
+                                            <div class="svg-wrapper">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                                    height="24">
+                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                    <path fill="currentColor"
+                                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <span>ارسال</span>
+                                    </button>
+                                </div>
+                                <!-- send btn -->
+                            </div>
+                            <!-- send comment box -->
+
+                            <!-- comment list -->
+                            <div
+                                class="w-11/12 flex flex-col items-center justify-center commentsInfo py-4 filterItem mx-auto text-gray-800 dark:text-white">
+
+                                <!-- comment list title -->
+                                <div class="flex flex-col w-11/12">
+                                    <h4 class="text-2xl">نظرات</h4>
+                                    <p class="mt-2">آخرین نظراتی که شما عزیزان برای ما نوشتید</p>
+                                </div>
+                                <!-- comment list title -->
+
+                                <!-- comment list box -->
+                                <div class="flex flex-col w-full my-6">
+
+                                    <!-- comment item -->
+                                    <div class="flex flex-col w-full border-gray-400 border-b-2 pt-6 pb-4">
+                                        <!-- userInfo -->
+                                        <div class="flex w-full">
+                                            <div class="flex items-center justify-center commentUserImage">
+                                                <img class="w-12 h-12 sm:w-20 sm:h-20 rounded-full"
+                                                    src="./../assets/img/coursePage/userImage.jpg" alt="">
+                                            </div>
+                                            <div class="flex flex-col text-sm sm:text-lg">
+                                                <div class="flex mt-3">
+                                                    <p>اضغر</p>
+                                                </div>
+                                                <div class="flex items-center mt-3 gap-x-4">
+                                                    <span>22/08/1401</span>
+                                                    <span class="bg-blue-500 px-2 py-1 rounded-lg text-sm">منتظر
+                                                        تایید</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- userInfo -->
+                                        <!-- comment text -->
+                                        <div class="flex w-full items-center justify-end mt-3 text-sm sm:text-lg">
+                                            <p class="comementBox-width">وای چه دوره خوبی</p>
+                                        </div>
+                                        <!-- comment text -->
+
+                                        <!-- comment answer -->
+                                        <!-- comment answer -->
+                                    </div>
+                                    <!-- comment item -->
+
+
+
+                                    <!-- comment item -->
+                                    <div class="flex flex-col w-full border-gray-400 border-b-2 pt-6 pb-4">
+                                        <!-- userInfo -->
+                                        <div class="flex w-full">
+                                            <div class="flex items-center justify-center commentUserImage">
+                                                <img class="w-12 h-12 sm:w-20 sm:h-20 rounded-full"
+                                                    src="./../assets/img/coursePage/userImage.jpg" alt="">
+                                            </div>
+                                            <div class="flex flex-col text-sm sm:text-lg">
+                                                <div class="flex mt-3">
+                                                    <p>اضغر</p>
+                                                </div>
+                                                <div class="flex items-center mt-3 gap-x-4">
+                                                    <span>22/08/1401</span>
+                                                    <span class="bg-green-500 px-2 py-1 rounded-lg text-sm">تایید
+                                                        شده</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- userInfo -->
+                                        <!-- comment text -->
+                                        <div class="flex w-full items-center justify-end mt-3 text-sm sm:text-lg">
+                                            <p class="comementBox-width">وای چه دوره خوبی</p>
+                                        </div>
+                                        <!-- comment text -->
+
+                                        <!-- comment answer -->
+                                        <div class="w-full mb-2 mt-6 flex justify-end">
+                                            <div class="comementBox-width">
+                                                <!-- adminInfo -->
+                                                <div class="flex w-full">
+                                                    <div class="flex items-center justify-center commentUserImage">
+                                                        <img class="w-12 h-12 sm:w-20 sm:h-20 rounded-full"
+                                                            src="./../assets/img/coursePage/admin.png" alt="">
+                                                    </div>
+                                                    <div class="flex flex-col text-sm sm:text-lg">
+                                                        <div class="flex mt-3">
+                                                            <p>ادمین</p>
+                                                        </div>
+                                                        <div class="flex items-center mt-3 gap-x-4">
+                                                            <span>22/08/1401</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <!-- adminInfo -->
+                                                <!-- answer text -->
+                                                <div
+                                                    class="flex w-full items-center justify-end mt-3 text-sm sm:text-lg">
+                                                    <p class="comementBox-width">ممنونم از شما</p>
+                                                </div>
+                                                <!-- answer text -->
+
+                                            </div>
+                                        </div>
+                                        <!-- comment answer -->
+
+                                    </div>
+                                    <!-- comment item -->
+
+
+
+                                </div>
+                                <!-- comment list box -->
+
+
+                                <!-- showMore btn -->
+                                <div class="w-full mb-8 mt-8 flex justify-center items-center">
+                                    <button class="cmShowMore"> نمایش بیشتر
+                                    </button>
+                                </div>
+                                <!-- showMore btn -->
+
+
+
+                                <!-- no comment -->
+                                <div
+                                    class="w-full flex flex-col gap-y-4 justify-center items-center text-2xl my-12 text-gray-800 dark:text-white">
+                                    <i class="fa fa-comment"></i>
+                                    هنوز دیدگاهی ثبت نشده
+                                </div>
+                                <!-- no comment -->
+
+
+                            </div>
+                            <!-- comment list -->
+
+
+
+                        </div>
+                        <!-- comment -->
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- end padcastPage -->
+
+        </div>
+
+        <!-- end Content -->
+
+
+          <!-- start footer -->
+          <div class="footerBg">
+            <div
+                class="flex w-full flex-wrap justify-between backdrop-blur-sm bg-black/30 shadow wow animate__animated animate__fadeIn">
+
+                <!-- footer link box -->
+                <div class="w-full md:w-6/12 lg:w-3/12 h-72 px-2 flex flex-col justify-center items-center wow animate__animated animate__fadeInUp"
+                    data-wow-delay="0.5s">
+                    <ul class="flex flex-col w-11/12 mx-auto text-white justify-center text-center  items-start">
+                        <li class="flex items-center py-2 cursor-pointer">
+                            <i class="fa fa-map-marker mx-2"></i>
+                            <address>آدرس : ادرس ادرس ادرس ادرس</address>
+                        </li>
+                        <li class="flex items-center py-2 cursor-pointer">
+                            <i class="fa fa-envelope mx-2"></i>
+                            <p>ایمیل : test@gmail.com</p>
+                        </li>
+                        <li class="flex items-center py-2 cursor-pointer">
+                            <i class="fa fa-location-arrow mx-2"></i>
+                            <p>ایدی تلگرام : @testTel</p>
+                        </li>
+                        <li class="flex items-center py-2 cursor-pointer">
+                            <i class="fa fa-phone mx-2"></i>
+                            <p>
+                                شماره تماس : 031611300032
+                            </p>
+                        </li>
+                        <li class="flex items-center justify-between py-2 cursor-pointer flex items-center gap-x-4">
+                            <a href="">
+                                <img class="w-8 h-8" src="./../assets/img/landing/telegram.png" alt="">
+                            </a>
+                            <a href="">
+                                <img class="w-8 h-8 insta" src="./../assets/img/landing/instagram.png" alt="">
+                            </a>
+                            <a href="">
+                                <img class="w-8 h-8 whatsapp" src="./../assets/img/landing/whatsapp.png" alt="">
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+                <!-- footer link box -->
+
+                <!-- footer link logo and captions -->
+                <div class="flex flex-col w-full order-first md:w-full lg:w-6/12 lg:order-none  h-72 justify-center items-center wow animate__animated animate__fadeInUp"
+                    data-wow-delay="0.5s">
+                    <div class="w-full flex justify-center items-center">
+                        <img class="w-20" src="./../assets/img/landing/Course.png" alt="">
+                    </div>
+
+                    <div class="border-box w-full h-auto mt-4">
+                        <p class="w-full my-3 text-center text-white"> عضویت در خبرنامه، برای عضویت ایمیل خود را ارسال
+                            نمایید</p>
+                        <form>
+
+                            <div class="flex items-center w-full mb-3">
+                                <div class="relative w-7/12 md:8/12 xl:w-10/12 mx-2">
+                                    <label for="member_email"
+                                        class="hidden block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                        آدرس ایمیل
+                                    </label>
+                                    <input id="member_email"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-4 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 outline-none"
+                                        placeholder="آدرس ایمیل شما ..." required="" type="email">
+                                </div>
+                                <button
+                                    class="w-5/12 md:4/12 xl:w-2/12 mx-2 h-full px-5 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg cursor-pointer hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    ثبت ایمیل
+                                </button>
+                            </div>
+
+                        </form>
+
+
+                        <ul class="flex justify-between text-white px-4 mt-6">
+                            <li class="flex items-center text-[6px]"><i class="fa fa-circle mx-2"></i><a
+                                    class="text-base" href="">لینک 1</a></li>
+                            <li class="flex items-center text-[6px]"><i class="fa fa-circle mx-2"></i><a
+                                    class="text-base" href="">لینک 1</a></li>
+                            <li class="flex items-center text-[6px]"><i class="fa fa-circle mx-2"></i><a
+                                    class="text-base" href="">لینک 1</a></li>
+                            <li class="flex items-center text-[6px]"><i class="fa fa-circle mx-2"></i><a
+                                    class="text-base" href="">لینک 1</a></li>
+                            <li class="flex items-center text-[6px]"><i class="fa fa-circle mx-2"></i><a
+                                    class="text-base" href="">لینک 1</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- footer link logo and captions -->
+
+                <!-- footer links -->
+                <div class="flex justify-center items-start text-white px-4 w-full md:w-6/12 lg:w-3/12  h-72 wow animate__animated animate__fadeInUp"
+                    data-wow-delay="0.5s">
+                    <div class="flex flex-col w-6/12 justify-center  items-start mt-12">
+                        <h4 class="text-lg mb-4">بخش های سایت</h4>
+                        <ul class="text-gray-300 dark:text-gray-500">
+                            <li class="flex items-center transition hover:text-white text-[6px]"><i
+                                    class="fa fa-circle mx-2"></i><a class="text-base" href="">قوانین و مقررات</a></li>
+                            <li class="flex items-center transition hover:text-white text-[6px]"><i
+                                    class="fa fa-circle mx-2"></i><a class="text-base" href="">مدرسان</a></li>
+                            <li class="flex items-center transition hover:text-white text-[6px]"><i
+                                    class="fa fa-circle mx-2"></i><a class="text-base" href="">درباره ما</a></li>
+                            <li class="flex items-center transition hover:text-white text-[6px]"><i
+                                    class="fa fa-circle mx-2"></i><a class="text-base" href="">ارتباط با ما</a></li>
+                            <li class="flex items-center transition hover:text-white text-[6px]"><i
+                                    class="fa fa-circle mx-2"></i><a class="text-base" href="">ارتباط با ما</a></li>
+                            <li class="flex items-center transition hover:text-white text-[6px]"><i
+                                    class="fa fa-circle mx-2"></i><a class="text-base" href="">ارتباط با ما</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col w-6/12 justify-center items-start mt-12">
+                        <h4 class="text-lg mb-4">بخش های سایت</h4>
+                        <ul class="text-gray-300 dark:text-gray-500">
+                            <li class="flex items-center transition hover:text-white text-[6px]"><i
+                                    class="fa fa-circle mx-2"></i><a class="text-base" href="">قوانین و مقررات</a></li>
+                            <li class="flex items-center transition hover:text-white text-[6px]"><i
+                                    class="fa fa-circle mx-2"></i><a class="text-base" href="">مدرسان</a></li>
+                            <li class="flex items-center transition hover:text-white text-[6px]"><i
+                                    class="fa fa-circle mx-2"></i><a class="text-base" href="">درباره ما</a></li>
+                            <li class="flex items-center transition hover:text-white text-[6px]"><i
+                                    class="fa fa-circle mx-2"></i><a class="text-base" href="">ارتباط با ما</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <!-- footer links -->
+
+
+            </div>
+        </div>
+        <!-- end footer -->
+
+
+    </div>
+
+    <!-- copyright -->
+    <div class="w-full bg-gray-900 text-white p-4 text-center"> تمامی حقوق مادی و معنوی این سایت متعلق به آریاتک می
+        باشد
+        و هرگونه کپی
+        برداری غیرقانونی محسوب خواهد شد </div>
+    <!-- fcopyright -->
+
+
+    <div class="scrollToTopBtn scrollToTop flex justify-center items-center">
+        <img class="w-6/12" src="./../assets/img/landing/top-arrow.png" alt="">
+    </div>
+    </div>
+
+    <script src="./../assets/js/menuMobileAccordion.js"></script>
+
+    <script src="./../assets/js/scrollToTop.js"></script>
+    <script src="./../assets/js/audioHandler.js"></script>
+    <script src="./../assets/js/fixedHeader.js"></script>
+
+</body>
+
+
+</html>
